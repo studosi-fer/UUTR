@@ -1,6 +1,0 @@
-c:\users\tomislav\documents\visual studio 2013\Projects\TurningovStroj\TurningovStroj\bin\Debug\TurningovStroj.exe.config
-c:\users\tomislav\documents\visual studio 2013\Projects\TurningovStroj\TurningovStroj\bin\Debug\TurningovStroj.exe
-c:\users\tomislav\documents\visual studio 2013\Projects\TurningovStroj\TurningovStroj\bin\Debug\TurningovStroj.pdb
-c:\users\tomislav\documents\visual studio 2013\Projects\TurningovStroj\TurningovStroj\obj\Debug\TurningovStroj.csprojResolveAssemblyReference.cache
-c:\users\tomislav\documents\visual studio 2013\Projects\TurningovStroj\TurningovStroj\obj\Debug\TurningovStroj.exe
-c:\users\tomislav\documents\visual studio 2013\Projects\TurningovStroj\TurningovStroj\obj\Debug\TurningovStroj.pdb
