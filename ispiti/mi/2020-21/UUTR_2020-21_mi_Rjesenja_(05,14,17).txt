@@ -1,0 +1,120 @@
+========== Zadatak 5. ==========
+
+za k=1..6
+	stanje qk odgovara trenutnom ostatku
+q6 prihvatljivo
+
+ne smije prihvatiti početne 0
+	q0,0->q7
+	q7,*->q7
+
+ako je nizu m := a1..an ostatak bio k
+	ostatak od (10m + a[n+1]) je (10k + a[n+1]) mod 6
+
+
+	0	1	2	3	4	5	6	7	8	9
+q0	q7	q1	q2	q3	q4	q5	q6	q1	q2	q3
+q1	q4	q5	q6	q1	q2	q3	q4	q5	q6	q1
+q2	q2	q3	q4	q5	q6	q1	q2	q3	q4	q5
+q3	q6	q1	q2	q3	q4	q5	q6	q1	q2	q3
+q4	q4	q5	q6	q1	q2	q3	q4	q5	q6	q1
+q5	q2	q3	q4	q5	q6	q1	q2	q3	q4	q5
+q6	q6	q1	q2	q3	q4	q5	q6	q1	q2	q3	1
+q7	q7	q7	q7	q7	q7	q7	q7	q7	q7	q7
+
+stanja q1 i q4 su jednaka jer imaju iste prijelaze i prihvatljivost
+	također q2 i q5
+	q3 i q6 nisu jer nemaju istu prihvatljivost
+
+3. algoritam
+
+q1	x
+q2	x	x
+q3	x	x	x
+q6	x	x	x	x
+q7	x	x	x	x	x
+	q0	q1	q2	q3	q6
+
+konačno
+	0	1	2	3	4	5	6	7	8	9
+q0	q7	q1	q2	q3	q1	q2	q6	q1	q2	q3
+q1	q1	q2	q6	q1	q2	q3	q1	q2	q6	q1
+q2	q2	q3	q1	q2	q6	q1	q2	q3	q1	q2
+q3	q6	q1	q2	q3	q1	q2	q6	q1	q2	q3
+q6	q6	q1	q2	q3	q1	q2	q6	q1	q2	q3	1
+q7	q7	q7	q7	q7	q7	q7	q7	q7	q7	q7
+
+========== Zadatak 14. ==========
+
+0	abb.
+0a4	bb.
+0a4b5	b.
+0a4B6	b.
+0B2	b.
+0B2b5	.
+0B2B2	.
+0B2B2A3	.
+0B2A3	.
+0A1	.
+
+1 za ulaz . 
+	prihvaća
+	
+========== Zadatak 17. ==========
+
+S	->	ASA
+		A
+		ε
+A	->	11
+		ε
+B	->	BC
+C	->	00
+
+micanje mrtvih (B)
+S	->	ASA
+		A
+		ε
+A	->	11
+		ε
+C	->	00
+
+micanje nedostižnih
+dostižni: S
+          SA
+S	->	ASA
+		A
+		ε
+A	->	11
+		ε
+
+micanje ε-produkcija
+S->ε mora ostati jer se prihvaća i prazan niz
+macanje A->ε
+	S	->	ASA
+			SA
+			AS
+			S
+
+micanje jediničnih
+micanje S->A
+	S	->	11
+micanje S->S
+
+sad imamo
+S	->	ASA
+		SA
+		AS
+		11
+		ε
+A	->	11
+-----------
+
+konačno:
+S	->	A[SA]
+		SA
+		AS
+		[1][1]
+		ε
+A	->	[1][1]
+[SA]	->	SA
+[1]	->	1
